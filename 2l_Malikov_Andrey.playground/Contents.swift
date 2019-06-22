@@ -17,3 +17,17 @@ check = isItEvenNumber(n: 4)
 check = isItEvenNumber(n: 5)
 
 
+// 2. Написать функцию, которая определяет, делится ли число без остатка на 3.
+
+func isNumberCanBeDivided(n: Int, div: Int)->Bool{
+    if n % div == 0 {
+        print("\(n) делится на \(div) без остатка")
+        return true
+    }
+    else {
+        print("\(n) не делится на \(div) без остатка")
+        return false
+    }
+}
+check = isNumberCanBeDivided(n: 6, div: 3)
+check = isNumberCanBeDivided(n: 6, div: 4)
