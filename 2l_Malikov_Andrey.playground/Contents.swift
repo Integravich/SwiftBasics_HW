@@ -54,4 +54,31 @@ while i <= lasti {
     i += 1
 }
 
-let checka = array
+var checka = array
+
+
+// 5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
+// Числа Фибоначчи определяются соотношениями Fn=Fn-1 + Fn-2.
+
+func addNextFiboNumber(array: [Double]) -> [Double] {
+    var array2 = array
+    switch array.count {
+    case 0:
+        array2.append(0)
+        return array2
+    case 1:
+        array2.append(1)
+        return array2
+    default:
+        let n = array.count
+        array2.append(array[n-1] + array[n-2])
+        return array2
+    }
+}
+
+var arrayFibo = [Double]()
+for _ in 0...99 {
+    arrayFibo = addNextFiboNumber(array: arrayFibo)
+    //print(arrayFibo[arrayFibo.count-1])
+}
+
