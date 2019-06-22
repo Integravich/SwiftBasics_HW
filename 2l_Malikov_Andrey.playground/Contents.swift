@@ -31,3 +31,11 @@ func isNumberCanBeDivided(n: Int, div: Int)->Bool{
 }
 check = isNumberCanBeDivided(n: 6, div: 3)
 check = isNumberCanBeDivided(n: 6, div: 4)
+
+
+// 3. Создать возрастающий массив из 100 чисел.
+
+var array = [Int]()
+for i in 0...99 {
+    array.append(i)
+}
