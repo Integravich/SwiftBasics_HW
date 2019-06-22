@@ -4,11 +4,11 @@ import UIKit
 
 func isItEvenNumber(n: Int)->Bool{
     if n % 2 == 0 {
-        print("\(n) - четное число")
+        //print("\(n) - четное число")
         return true
     }
     else {
-        print("\(n) - нечетное число")
+        //print("\(n) - нечетное число")
         return false
     }
 }
@@ -21,11 +21,11 @@ check = isItEvenNumber(n: 5)
 
 func isNumberCanBeDivided(n: Int, div: Int)->Bool{
     if n % div == 0 {
-        print("\(n) делится на \(div) без остатка")
+        //print("\(n) делится на \(div) без остатка")
         return true
     }
     else {
-        print("\(n) не делится на \(div) без остатка")
+        //print("\(n) не делится на \(div) без остатка")
         return false
     }
 }
@@ -39,3 +39,19 @@ var array = [Int]()
 for i in 0...99 {
     array.append(i)
 }
+
+
+// 4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
+
+var i: Int = 0
+var lasti: Int = array.count - 1
+while i <= lasti {
+    if isItEvenNumber(n: array[i]) || !isNumberCanBeDivided(n: array[i], div: 3) {
+        array.remove(at: i)
+        i -= 1
+        lasti -= 1
+    }
+    i += 1
+}
+
+let checka = array
