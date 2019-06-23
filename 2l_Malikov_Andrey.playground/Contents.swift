@@ -82,3 +82,32 @@ for _ in 0...99 {
     //print(arrayFibo[arrayFibo.count-1])
 }
 
+
+// 6. * Заполнить массив из 100 элементов различными простыми числами. Натуральное число, большее единицы, называется простым, если оно делится только на себя и на единицу. Для нахождения всех простых чисел не больше заданного числа n, следуя методу Эратосфена, нужно выполнить следующие шаги:
+//
+// a. Выписать подряд все целые числа от двух до n (2, 3, 4, ..., n).
+// b. Пусть переменная p изначально равна двум — первому простому числу.
+// c. Зачеркнуть в списке числа от 2p до n, считая шагами по p (это будут числа, кратные p: 2p, 3p, 4p, ...).
+// d. Найти первое не зачёркнутое число в списке, большее, чем p, и присвоить значению переменной p это число.
+// e. Повторять шаги c и d, пока возможно.
+
+var arrayPrimeNumbers = [Int]()
+arrayPrimeNumbers.append(2) //; print(arrayPrimeNumbers[0])
+var nextNumber = 3
+var isPrime: Bool
+while arrayPrimeNumbers.count < 100 {
+    isPrime = true
+    var i = 0
+    while (i < arrayPrimeNumbers.count) && isPrime {
+        if nextNumber % arrayPrimeNumbers[i] == 0 {
+            isPrime = false
+        }
+        i += 1
+    }
+    if isPrime {
+        arrayPrimeNumbers.append(nextNumber) //; print(nextNumber)
+    }
+    nextNumber += 1
+}
+
+
