@@ -9,35 +9,35 @@ import UIKit
  6.    Вывести значения свойств экземпляров в консоль.
  */
 
-enum Manufacturer: String {
-    case MercedesBenz = "Mercedes-Benz"
-    case Volvo = "Volvo"
-    case Mitsubishi = "Mitsubishi"
-    case Ford = "Ford"
-}
-
-enum Engine {
-    case started, stopped
-}
-
-enum OpenClose {
-    case opened, closed
-}
-
-enum Transmission {
-    case automatic, manual
-}
-
-enum BodyColor: String {
-    case red = "красный"
-    case orange = "оранжевый"
-    case green = "зеленый"
-    case blue = "синий"
-    case black = "черный"
-    case white = "белый"
-}
-
 class Car {
+    enum Manufacturer: String {
+        case MercedesBenz = "Mercedes-Benz"
+        case Volvo = "Volvo"
+        case Mitsubishi = "Mitsubishi"
+        case Ford = "Ford"
+    }
+    
+    enum Engine {
+        case started, stopped
+    }
+    
+    enum OpenClose {
+        case opened, closed
+    }
+    
+    enum Transmission {
+        case automatic, manual
+    }
+    
+    enum BodyColor: String {
+        case red = "красный"
+        case orange = "оранжевый"
+        case green = "зеленый"
+        case blue = "синий"
+        case black = "черный"
+        case white = "белый"
+    }
+    
     let manufacturer: Manufacturer
     let year: Int
     let color: BodyColor
@@ -81,11 +81,11 @@ class Car {
     }
 }
 
-enum Lights {
-    case xenon, LED
-}
-
 class SportCar: Car {
+    enum Lights {
+        case xenon, LED
+    }
+    
     let lights: Lights
     let horsePower: Int
     var wheelsRadius: Int
